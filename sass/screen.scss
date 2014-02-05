@@ -1,0 +1,73 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+/*!
+ * Sass Bootstrap v3.0.17
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world by @mdo and @fat.
+ * 
+ * Sass -ified by Aaron Lademann @alademann
+ */
+
+// Compass utilities
+@import "compass";
+
+// Core variables and mixins
+@import "bs/variables";
+@import "bs/mixins";
+
+// Reset
+@import "bs/normalize";
+
+// Core CSS
+@import "bs/scaffolding";
+@import "bs/type";
+@import "bs/code";
+@import "bs/grid";
+@import "bs/tables";
+@import "bs/forms";
+@import "bs/buttons";
+
+// Components: common
+@import "bs/component-animations";
+@import "bs/glyphicons";
+@import "bs/dropdowns";
+@import "bs/button-groups";
+@import "bs/input-groups";
+@import "bs/navs";
+@import "bs/navbar";
+@import "bs/breadcrumbs";
+@import "bs/pagination";
+@import "bs/pager";
+@import "bs/labels";
+@import "bs/badges";
+@import "bs/jumbotron";
+@import "bs/thumbnails";
+@import "bs/progress-bars";
+@import "bs/media";
+@import "bs/list-group";
+@import "bs/panels";
+@import "bs/wells";
+@import "bs/close";
+
+// Components w/ javascript
+@import "bs/alerts";
+@import "bs/modals";
+@import "bs/tooltip";
+@import "bs/popovers";
+@import "bs/carousel";
+
+// Utility classes
+@import "bs/utilities"; // Has to be last to override when necessary
+@import "bs/responsive-utilities"; 
+
+//Personal class
+@import "bs/main";
