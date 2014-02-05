@@ -78,7 +78,11 @@
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
 }
 
-
+.btn-centered{
+  width: 25%;
+  display: block;
+  margin: .8em auto 0;
+}
 // Link buttons
 // -------------------------
 

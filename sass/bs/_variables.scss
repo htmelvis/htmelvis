@@ -2,7 +2,7 @@
 // Variables
 // --------------------------------------------------
 
-
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
 // Global values
 // --------------------------------------------------
 
@@ -19,8 +19,8 @@ $almost-white:           #f7f7f7 !default;
 // Brand colors
 // -------------------------
 
-$brand-primary:         #428bca !default;
-$brand-success:         #5cb85c !default;
+$brand-primary:         #3793DE !default;
+$brand-success:         #DE8237 !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 $brand-info:            #5bc0de !default;
@@ -40,7 +40,8 @@ $link-hover-color:      darken($link-color, 15%) !default;
 // Typography
 // -------------------------
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica-, Arial, sans-serif !default;
+$font-family-sans-serif:  "Montserrat Alternates", Helvetica-, Arial, sans-serif !default;
+$nevis-font-family: "NevisBold", Helvetica-, Arial, sans-serif; 
 $font-family-serif:       Georgia, "Times New Roman-", Times, serif !default;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier- New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
@@ -252,14 +253,14 @@ $grid-float-breakpoint:     $screen-sm !default;
 // -------------------------
 
 // Basics of a navbar
-$navbar-height:                    50px !default;
+$navbar-height:                    60px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-default-color:             #777 !default;
 $navbar-default-bg:                #f8f8f8 !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor($grid-gutter-width / 2) !default;
-$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
+$navbar-padding-vertical:          14px 15px !default;
 
 // Navbar links
 $navbar-default-link-color:                #777 !default;
@@ -627,3 +628,12 @@ $container-desktop:           ((940px + $grid-gutter-width)) !default;
 
 // Large screen / wide desktop
 $container-lg-desktop:        ((1140px + $grid-gutter-width)) !default;
+
+@font-face {
+	font-family: 'NevisBold';
+	src: url('../fonts/nevis-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/nevis-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('../fonts/nevis-webfont.woff') format('woff'), /* Modern Browsers */
+	     url('../fonts/nevis-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('../fonts/nevis-webfont.eot#svgFontName') format('svg'); /* Legacy iOS */
+	}
