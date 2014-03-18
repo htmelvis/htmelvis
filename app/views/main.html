@@ -1,0 +1,119 @@
+<img class="full-bg" src="/images/guitar.jpg" du-parallax y="background" alt="htmelvis large guitar" />
+
+<section class="main">
+  <div class="opening container">
+     <h1>Online Solutions for Ambitious, Forward-Thinking Businesses</h1>
+     <a class="btn btn-primary btn-lg btn-callout" href="#contact" du-smooth-scroll duration="3000">Get Started <i class="glyphicon glyphicon-circle-arrow-right get-started"></i></a>
+  </div>
+</section>
+
+<section data-scroll-reveal="enter from left after 1s" id="about" class="about">
+	<div class="bio container">
+		<h1>A little bit about htmelvis</h1>
+		<section class="row">
+		 <article class="col-xs-8">
+			<header>
+			  <h2>Devoted to Online Success</h2>				
+			</header>
+				<p>I am a designer who specializes in Front End Development but I'm not afraid to shuffle through the back end. I am very familiar with the LAMP stack and prefer to work with PHP, Javascript, and Sass(CSS). I am a lover of Wordpress and AngularJS. I am currently working as a E-Commerce Specialist/Lead Web Developer for a large manufacturer. I focus on e-commerce, search engine optimization and web application development.</p>
+				<p>Clean, simple, customer-tested User Interfaces are some of my favorite things. </p>
+				
+				<p> I'm always trying to learn new things and expand my skills. I still play music, ride BMX bikes, and paint when I can find the time.  </p>
+			<footer>
+				<a du-smooth-scroll duration="1000" href="#services">See What I Can Do For You &raquo;</a>
+			</footer>
+		  </article>
+		  <aside class="col-xs-4">
+			 <h2>Get social and connect</h2>
+			 
+			 <ul>
+			 	<li>
+			 		<a href="http://www.twitter.com/htmelvis">@htmelvis</a>
+			 	</li>
+			 	<li><a href="http://www.github.com/htmelvis">Github</a></li>
+			 	<li><a href="http://www.linkedin.com/profile/view?id=49431203&amp;goback=%2Enmp_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1_*1&amp;trk=spm_pic">LinkedIn</a></li>
+			 	<li><a href="mailto:info@htmelvis.com">info@htmelvis.com</a></li>
+			 </ul>
+			 <a href="resume.pdf" class="resume btn btn-info">Download Resume<i class="glyphicon glyphicon-save"></i></a>
+		  </aside>
+		</section>
+		
+	</div>
+
+</section>
+
+<section data-scroll-reveal="enter from right after .65s" class="services" id="services">
+	<div class="service container">
+		<h1>Waking up everyday loving what I do </h1>
+		<article>
+			
+			<p>In 2013 I worked on 55 websites. In that time I realized the best ways to get sites to perform well for people. In turn, I make the most effective sites for search engines. I test everything and employ the highest quality data. I offer optimization audits, digital search marketing, and full on web application re-designs. 
+			</p>
+			<blockquote data-scroll-reveal="enter from left after 1.25s">Site not performing well? <br>Let's change that!</blockquote>
+
+			<p>In the past few years I've had the pleasure of working with some of the best in all industries including: Beaumont Technologies, Welder's Supply, RJ Corman Railpower, The Uganda Project, Atlas &amp; Mason, ASTA-USA, Kelly Bros, Saint Vincent Hospital, U.S. Netting, Solenoid Solutions, Knox Computer Solutions, and TM Filtration.</p>
+			<p>If you are interested in my work feel free to <a href="#contact" du-smooth-scroll duration="2000">contact me</a>.</p>
+		</article>
+	</div>
+</section>
+
+<section id="contact" class="contact" data-scroll-reveal="enter from bottom after .75s and move -100px">
+	<div class="container">
+		<h2>Ask me a Question</h2>
+	<form name="contactForm" ng-submit="submitForm(contactForm.$valid)" class="form row" novalidate>
+	  <div class="col-xs-6">
+		<div class="form-group" ng-class="{'has-error': contactForm.name.$invalid && !contactForm.name.$pristine }">
+			<label for="name" class="control-label">Name: </label>
+			<input type="text" id="name" name="name" ng-minlength="2" ng-model="formData.name" class="form-control" required>
+			<p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You Must Enter Your Name!</p>
+		</div>
+		<div class="form-group">
+			<label for="subject" class="control-label">Subject: </label>
+			<datalist id="subject">
+				<option value="I want to know more about Search Engine Optimization.">
+				<option value="I want to know more about Website Design.">
+				<option value="I want to know more about Online Marketing.">
+				<option value="I want to know more about Web Development.">
+				<option value="Let's talk about everything.">
+			</datalist>
+			<input name="subject" ng-model="formData.subject" name="subject" class="form-control data-list" placeholder="What would you like to know?" list="subject" />
+		</div>
+	  </div>
+	  <div class="col-xs-6">
+		<div class="form-group" ng-class="{'has-error': contactForm.email.$invalid && !contactForm.email.$pristine }">
+			<label for="email" class="control-label">Email: </label>
+			<p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">You Must Enter A Valid Email Address!</p>
+			<input type="email" id="email" ng-model="formData.email" name="email" class="form-control" required>
+			
+		</div>
+	  </div>
+	<div class="col-xs-6">
+		<div class="form-group" ng-class="{'has-error':contactForm.url.$invalid && !contactForm.url.$pristine }">
+			<label for="url" class="control-label">Website: </label>
+			<p ng-show="contactForm.url.$invalid && !contactForm.url.$pristine" class="help-block">What would you like me to look at?</p>
+			<input type="url" id="url" ng-model="formData.url" name="url" class="required form-control" placeholder="http://" required>
+			
+		</div>
+	  </div>
+	  <div class="col-xs-12">
+	  	<div class="form-group" ng-class="{'has-error':contactForm.message.$invalid && !contactForm.message.$pristine }">
+	  	
+	  	<label for="message" class="control-label">Your Message: </label>
+	  	<p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="help-block">Please write me a brief message!</p>
+	  	<textarea name="message" ng-model="formData.message" class="textarea form-control" id="message" cols="30" rows="10" required></textarea>
+	  </div>
+	  </div>
+	  <div class="col-xs-12">
+	  	<input ng-disabled="contactForm.$invalid" type="submit" class="btn btn-block btn-lg btn-info" value="Send It">
+	  </div>
+	  
+	</form>
+	
+	</div>
+</section>
+
+<footer class="footer">
+      <div class="container">
+        <p class="copyright">For the ♥ of the Internet &copy; {{date}}</p>
+      </div>
+    </footer>
