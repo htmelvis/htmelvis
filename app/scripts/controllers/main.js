@@ -8,7 +8,6 @@ app.controller('MainCtrl',['$scope','parallaxHelper', '$http', '$location' ,func
 
   var newdate = new Date;
   $scope.date = newdate.getFullYear();
-
   $scope.formData = {};
   $scope.submitForm = function(){
   	if($scope.contactForm.$valid){

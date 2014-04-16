@@ -60,7 +60,11 @@
 <section id="contact" class="contact" data-scroll-reveal="enter from bottom after .75s and move -100px">
 	<div class="container">
 		<h2>Ask me a Question</h2>
-	<form name="contactForm" ng-submit="submitForm(contactForm.$valid)" class="form row" novalidate>
+	<div class="success">
+		<p>{{message}}</p>
+	</div>
+	<form name="contactForm" ng-submit="submitForm(contactForm.$valid)" ng-hide="message" class="form row" novalidate>
+		<input type="text" class="hidden" name="honeypot" />
 	  <div class="col-xs-6">
 		<div class="form-group" ng-class="{'has-error': contactForm.name.$invalid && !contactForm.name.$pristine }">
 			<label for="name" class="control-label">Name: </label>
