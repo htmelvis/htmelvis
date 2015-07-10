@@ -1,10 +1,6 @@
 'use strict';
 app.controller('MainCtrl',['$scope','parallaxHelper', '$http', '$location' ,function ($scope, parallaxHelper, $http, $location) {
   $scope.background = parallaxHelper.createAnimator(0.6, -10, -860);
-  window.scrollReveal = new scrollReveal({reset: true, init: true}); 
-  TweenMax.to('.opening', 1.75, {opacity: 1} );
-  var tl = new TimelineMax({repeat: 100});
-  tl.to('.btn-callout', .75, {autoAlpha: 0.8}, 0.2);
 
   var newdate = new Date;
   $scope.date = newdate.getFullYear();
