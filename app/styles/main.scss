@@ -59,7 +59,8 @@ body {
     margin: 40px auto;
     display: block;
     text-transform: uppercase;
-
+    background: #5bc0de;
+    border-color: #46b8da;
   }
 }
 /* Custom page header */
@@ -93,12 +94,12 @@ blockquote{
 }
 #about{
   height: 750px;
-  padding: 180px 80px 80px 80px;
+  padding: 75px 80px 80px 80px;
   margin: 100px 0;
 }
 #services{
   height: 800px;
-  padding: 180px 80px 80px 80px;
+  padding: 95px 80px 80px 80px;
   margin: 200px 0;
 }
 .container-narrow > hr {
@@ -125,7 +126,8 @@ blockquote{
     margin-top: 28px;
 }
 .opening{
-  opacity: 0;
+  //opacity: 0;
+  //This corresponded to TweenMax
   padding-top: 115px;
 }
 p{
