@@ -245,3 +245,16 @@ p{
 .fragment.active {
     left: 0px;
 }
+.accent{
+  color: $brand-primary;
+}
+
+.port-row{
+  margin: 40px 0;
+  figure{
+    border: 8px solid $gray-lighter;
+    img{
+      border: 2px solid #444;
+    }
+  }
+}

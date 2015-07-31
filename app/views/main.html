@@ -13,7 +13,7 @@
 
 <section id="about" class="about">
 	<div class="bio container">
-		<h1>A little bit about htmelvis</h1>
+		<h1>Web Design, Development, and Online brand building</h1>
 		<h4>Pronounced: (<i>h-tee em el viss</i>)</h4>
 		<section class="row">
 			<aside class="col-xs-12 col-sm-12 col-md-8 col-lg-4 col-xl-4">
@@ -32,7 +32,7 @@
 		  </aside>
 		 <article class="col-xs-12 col-sm-12 col-md-4 col-lg-8 col-xl-8">
 			<header>
-			  <h2>Devoted to Online Success</h2>				
+			  <h2 class="accent">Devoted to Online Success</h2>
 			</header>
 				<p>Started out designer currently an Internet Consultant, Front End Dev, Web Worker, Father, and Husband. I enjoy writing HTML, CSS, and Javascript. I am currently working as a E-Commerce Specialist/Lead Web Developer for a large manufacturer. I focus on e-commerce, search engine optimization and web application development.</p>
 				<p>Clean, simple, customer-tested User Interfaces are some of my favorite things. I jump at the opportunity to work on interesting, ambitious projects.</p>
@@ -51,19 +51,35 @@
 
 <section class="services" id="services">
 	<div class="service container">
-		<h1>Loving what I do </h1>
+		<h1>What Services Do I Offer?</h1>
 		<article>
 			
-			<p>I understand how to get sites to generate more traffic, get more users and sell like you wouldn't believe. Some of what I offer:
+			<p>I understand how to get sites to generate more traffic, get more users and <br />sell like you wouldn't believe. What I am best at:
 			</p>
 
 			<ul>
-				<li>Web Optimization Audits</li>
+				<li>Web Optimization</li>
 				<li>Digital Search Marketing (SEO)</li>
 				<li>Web Application builds and re-designs</li>
+				<li>Repairs and diagnostics</li>
+				<li>Brand new websites</li>
+				<li>Training</li>
 			</ul>
-			<blockquote data-scroll-reveal="enter from left after 1.25s">Site not performing well? <br>Let's change that!</blockquote>
-		<!--//TODO:Build a row of portfolio pieces with modal and full explanation of what I did -->
+			<blockquote>Here's a bit of what I do.</blockquote>
+			<div class="row port-row">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+					<figure><img src="images/portfolio/beaumont.jpg" alt="beaumont lets talk plastic" /></figure>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+					<figure><img src="images/portfolio/tm.jpg" alt="TM Filtration products" /></figure>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+					<figure><img src="images/portfolio/usnetting.jpg" alt="US Netting" /></figure>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+					<figure><img src="images/portfolio/coderie.jpg" alt="Coderie Club" /></figure>
+				</div>
+			</div>
 			<p>In the past few years I've had the pleasure of working with some of the best in all industries including: Beaumont Technologies, Welder's Supply, RJ Corman Railpower, The Uganda Project, Atlas &amp; Mason, ASTA-USA, Kelly Bros, Saint Vincent Hospital, U.S. Netting, Solenoid Solutions, Knox Computer Solutions, and TM Filtration.</p>
 			<p>If you are interested in my work feel free to <a href="#contact" du-smooth-scroll duration="2000">contact me</a>.</p>
 		</article>
@@ -72,7 +88,7 @@
 
 <section id="contact" class="contact">
 	<div class="container">
-		<h2>Ask me a Question</h2>
+		<h2>Let me know how I can help you</h2>
 	<div class="success">
 		<p>{{message}}</p>
 	</div>
@@ -81,7 +97,7 @@
 	  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 		<div class="form-group" ng-class="{'has-error': contactForm.name.$invalid && !contactForm.name.$pristine }">
 			<label for="name" class="control-label">Name: </label>
-			<input type="text" id="name" name="name" ng-minlength="2" ng-model="formData.name" class="form-control" required>
+			<input tabindex="1" type="text" id="name" name="name" ng-minlength="2" ng-model="formData.name" class="form-control" required>
 			<p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You Must Enter Your Name!</p>
 		</div>
 		<div class="form-group">
@@ -93,14 +109,14 @@
 				<option value="I want to know more about Web Development.">
 				<option value="Let's talk about everything.">
 			</datalist>
-			<input name="subject" ng-model="formData.subject" name="subject" class="form-control data-list" placeholder="What would you like to know?" list="subject" />
+			<input name="subject" tabindex="3" ng-model="formData.subject" name="subject" class="form-control data-list" placeholder="What would you like to know?" list="subject" />
 		</div>
 	  </div>
 	  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 		<div class="form-group" ng-class="{'has-error': contactForm.email.$invalid && !contactForm.email.$pristine }">
 			<label for="email" class="control-label">Email: </label>
 			<p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">You Must Enter A Valid Email Address!</p>
-			<input type="email" id="email" ng-model="formData.email" name="email" class="form-control" required>
+			<input type="email" tabindex="2" id="email" ng-model="formData.email" name="email" class="form-control" required>
 			
 		</div>
 	  </div>
@@ -108,7 +124,7 @@
 		<div class="form-group" ng-class="{'has-error':contactForm.url.$invalid && !contactForm.url.$pristine }">
 			<label for="url" class="control-label">Website: </label>
 			<p ng-show="contactForm.url.$invalid && !contactForm.url.$pristine" class="help-block">What would you like me to look at?</p>
-			<input type="url" id="url" ng-model="formData.url" name="url" class="required form-control" placeholder="http://" required>
+			<input tabindex="4" type="url" id="url" ng-model="formData.url" name="url" class="required form-control" placeholder="http://" required>
 			
 		</div>
 	  </div>
@@ -117,7 +133,7 @@
 	  	
 	  	<label for="message" class="control-label">Your Message: </label>
 	  	<p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="help-block">Please write me a brief message!</p>
-	  	<textarea name="message" ng-model="formData.message" class="textarea form-control" id="message" cols="30" rows="10" required></textarea>
+	  	<textarea tabindex="5" name="message" ng-model="formData.message" class="textarea form-control" id="message" cols="30" rows="10" required></textarea>
 	  </div>
 	  </div>
 	  <div class="col-xs-12">
@@ -130,7 +146,7 @@
 </section>
 
 <footer class="footer">
-      <div class="container">
-        <p class="copyright">For the ♥ of the Internet &copy; {{date}}</p>
-      </div>
-    </footer>
+	<div class="container">
+		<p class="copyright">For the ♥ of the Internet &copy; {{date}}</p>
+	</div>
+</footer>
