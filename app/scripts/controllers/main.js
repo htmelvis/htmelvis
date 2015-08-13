@@ -27,4 +27,37 @@ app.controller('MainCtrl',['$scope','parallaxHelper', '$http', '$location' ,func
   	 $location = link;
   	 return true;
   };
+
+	var opts = {
+		containerId: 'sub',
+		namespace: 'sub',
+		interval: 5500,
+		speed: 100,
+		verbose: false,
+		random: false,
+		best: true
+	};
+	var opts2 ={
+		containerId: 'sub2',
+		namespace: 'sub2',
+		interval: 4000,
+		speed: 200,
+		verbose: false,
+		random: false,
+		best: true
+	}
+	var sub = new Sub([
+		"I'm Ed, An Entrepreneur.",
+		"I'm Ed, A Father. ",
+		"I'm Ed, A Web Worker. ",
+		"I'm Ed, A Husband. "
+	], opts).run();
+
+	var sub2 = new Sub([
+		"I love to build websites.",
+		"I love to build web apps.",
+		"I love to fix websites.",
+		"I love to design websites."
+	], opts2).run();
+
 }]);

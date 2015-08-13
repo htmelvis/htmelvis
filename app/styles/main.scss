@@ -45,12 +45,13 @@ body {
 .main{
   height: 840px;
   h1{
-    font-size: 72px;
+    font-size: 3em;
     text-align: center;
     margin-bottom: 40px;
     margin-top: 0px;
     font-weight: bold;
     line-height: 1.24em;
+    padding:40px;
   }
   .btn-callout{
     width: 300px;
@@ -129,6 +130,15 @@ blockquote{
   //opacity: 0;
   //This corresponded to TweenMax
   padding-top: 115px;
+  h2{
+    font-size: 72px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 0px;
+    font-weight: bold;
+    line-height: .4em;
+
+  }
 }
 p{
   line-height: 1.5em;
