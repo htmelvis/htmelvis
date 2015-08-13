@@ -40,8 +40,8 @@ app.controller('MainCtrl',['$scope','parallaxHelper', '$http', '$location' ,func
 	var opts2 ={
 		containerId: 'sub2',
 		namespace: 'sub2',
-		interval: 4000,
-		speed: 200,
+		interval: 6000,
+		speed: 100,
 		verbose: false,
 		random: false,
 		best: true
