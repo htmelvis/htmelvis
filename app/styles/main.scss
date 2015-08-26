@@ -37,7 +37,7 @@ body {
   font-size: 1.1em;
 }
 .client-login{
-  margin-left: 10px;
+  padding: 10px 15px 0px 15px;
   a.btn{
     padding: 5px 10px;
   }
@@ -194,23 +194,33 @@ p{
         border-bottom: 0;
     }
     //responsive nav area
-    
+  .nav-collapse.collapse{
+    display: block;
+  }
 }
 @media screen and (max-width: 768px) {
     img.full-bg{
       width: 140%;
     }
-    .nav-collapse.in ul{
-      width: 104%;
+    .bio h1, .service h1{
+      font-size: 2.5em;
+    }
+    .nav-collapse ul{
+      width: 100%;
       float: none !important;
+      clear: both;
+      display: block;
+      padding: 15px 0 0 0;
     }
   .navbar-inverse .navbar-nav > li > a {
     color: #fff;
     border-top: 1px solid #269abc;
     border-bottom: 1px solid #269abc;
   }
+
   .brand img{
     margin-bottom: 6px;
+
   }
   .opening{
     padding-top: 60px;

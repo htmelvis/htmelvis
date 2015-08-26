@@ -1,7 +1,14 @@
 'use strict';
 app.controller('MainCtrl',['$scope','parallaxHelper', '$http', '$location' ,function ($scope, parallaxHelper, $http, $location) {
   $scope.background = parallaxHelper.createAnimator(0.6, -10, -860);
-
+	function sizeNavToScreen(){
+		if(window.innerWidth <= 768){
+			angular.element('#nav-container').css({
+				'width': window.innerWidth
+			});
+		}
+	}
+	sizeNavToScreen();
   var newdate = new Date;
   $scope.date = newdate.getFullYear();
   $scope.formData = {};
