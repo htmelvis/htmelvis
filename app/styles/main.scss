@@ -36,12 +36,7 @@ body {
   padding: 20px 30px;
   font-size: 1.1em;
 }
-.client-login{
-  padding: 10px 15px 0px 15px;
-  a.btn{
-    padding: 5px 10px;
-  }
-}
+
 .main{
   height: 840px;
   h1{
@@ -169,6 +164,11 @@ p{
     }
   }
 }
+.client-login{
+  a.btn{
+    padding: 5px 10px;
+  }
+}
 .navbar-inverse .navbar-nav > li > a {
   color: #fff;
 }
@@ -193,6 +193,9 @@ p{
     .jumbotron {
         border-bottom: 0;
     }
+  ul.nav.navbar-nav.navbar-right{
+    margin-top: 6px;
+  }
     //responsive nav area
   .nav-collapse.collapse{
     display: block;
@@ -205,6 +208,12 @@ p{
     .bio h1, .service h1{
       font-size: 2.5em;
     }
+  .client-login{
+    padding: 10px 15px 0px 15px;
+    a.btn{
+      padding: 5px 10px;
+    }
+  }
     .nav-collapse ul{
       width: 100%;
       float: none !important;
@@ -214,8 +223,8 @@ p{
     }
   .navbar-inverse .navbar-nav > li > a {
     color: #fff;
-    border-top: 1px solid #269abc;
-    border-bottom: 1px solid #269abc;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
   }
 
   .brand img{
