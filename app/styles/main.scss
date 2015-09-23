@@ -1,6 +1,9 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import 'nav';
+@import 'article';
+
 body, h1,h2,h3,h4,h5,h6{
   font-family: 'Montserrat', sans-serif;
 }
@@ -36,9 +39,12 @@ body {
   padding: 20px 30px;
   font-size: 1.1em;
 }
-
+.tagline{
+  font-size: 2em;
+  margin-top: 0;
+}
 .main{
-  height: 840px;
+  height: 560px;
   h1{
     font-size: 4em;
     text-align: center;
@@ -53,11 +59,26 @@ body {
     width: 300px;
     padding: 25px 50px;
     font-size: 1.5em;
-    margin: 40px auto;
+    position:absolute;
+    bottom: -40px;
+    right: 80px;
     display: block;
     text-transform: uppercase;
-    background: #5bc0de;
+    background: $brand-info;
     border-color: #46b8da;
+    i.glyphicon{
+      -webkit-transition: all .5s ease-in;
+      -moz-transition: all .5s ease-in;
+      -ms-transition: all .5s ease-in;
+      -o-transition: all .5s ease-in;
+      transition: all .5s ease-in;
+    }
+    &:hover{
+      background-color: darken($brand-info, 15%);
+      i.glyphicon{
+        transform: rotate(90deg);
+      }
+    }
   }
 }
 /* Custom page header */
@@ -89,6 +110,7 @@ blockquote{
     border-top: 1px solid #e5e5e5;
     text-align: center;
 }
+
 #about{
   height: 750px;
   padding: 75px 80px 80px 80px;
@@ -126,8 +148,11 @@ blockquote{
   //opacity: 0;
   //This corresponded to TweenMax
   padding-top: 115px;
+  padding-bottom: 6em;
+  border-bottom: 1px solid #000;
+  position:relative;
   h2{
-    font-size: 4em;
+    margin-top: 0;
     text-align: center;
     margin-bottom: 40px;
     font-weight: bold;
@@ -225,7 +250,8 @@ p{
     color: #fff;
     border-top: 1px solid #444;
     border-bottom: 1px solid #444;
-  }
+
+   }
 
   .brand img{
     margin-bottom: 6px;
@@ -277,9 +303,8 @@ p{
     left: 0px;
 }
 .accent{
-  color: $brand-primary;
+  color: $brand-info;
 }
-
 .port-row{
   margin: 40px 0;
   figure{
@@ -287,5 +312,29 @@ p{
     img{
       border: 2px solid #444;
     }
+  }
+}
+dl{
+  dt{
+    padding-left: 5px;
+    padding: 8px 10px 10px 10px;
+    background: $brand-info;
+    color: white;
+    margin-bottom: 1em;
+    span{
+      font-family: 'Open Sans', sans-serif;
+      font-size: .9em;
+      font-weight: lighter;
+    }
+    .glyphicon{
+      padding-top:4px;
+    }
+    &:hover{
+      background: darken($brand-info, 10%);
+    }
+  }
+  dd{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8em;
   }
 }

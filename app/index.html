@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>htmelvis | web development and online marketing expertise from Erie, Pennsylvania</title>
-    <meta name="description" content="Web Design and Development from Erie, PA. UI Design Internet marketing, Search engine optimization and Information Technology Consulting. ">
+    <title>htmelvis | web development and online marketing expertise</title>
+    <meta name="description" content="Customer Centric Web Design, Development, and Digital Marketing. Erie's web designer.">
     <base href="/">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="htmelvisTemplateApp">
+  <body ng-app="htmelvis">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -46,9 +46,9 @@
 
           <div class="navbar-collapse collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#about" du-smooth-scroll duration="3000">about</a></li>
-              <li><a href="#services" du-smooth-scroll duration="3000">services/work</a></li>
-              <li><a href="#contact" du-smooth-scroll duration="3000">contact</a></li>
+              <li><a href="#about" du-scrollspy du-smooth-scroll duration="2000">about</a></li>
+              <li><a href="#services" du-scrollspy du-smooth-scroll duration="2000">services/work</a></li>
+              <li><a href="#contact" du-scrollspy du-smooth-scroll duration="2000">contact</a></li>
               <li class="client-login"><a href="https://htmelvis.freshbooks.com" target="_blank" class="btn btn-info navbar-btn">client login</a></li>
             </ul>
           </div>
@@ -57,7 +57,7 @@
       </nav>
 
     </header>
-    <div ng-view=""></div>
+    <div ng-view></div>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -85,14 +85,10 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
-    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/substituteteacher.js"></script>
-        <script src="bower_components/angular-scroll/angular-scroll.js"></script>
-        <script src="bower_components/ng-parallax/angular-parallax.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->

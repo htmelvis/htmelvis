@@ -1,11 +1,10 @@
 'use strict';
-var app = angular.module('htmelvisTemplateApp', [
+var app = angular.module('htmelvis', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ngRoute',
   'duScroll',
-  'duParallax'
 ]);
 
 app.config(['$routeProvider',function ($routeProvider) {

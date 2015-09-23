@@ -1,0 +1,37 @@
+.navbar-inverse .navbar-collapse .navbar-nav li a.active{
+  color: #cdac20;
+}
+//Need to add the rest of the styles in here
+#nav-container *{
+  -webkit-transition: all .4s ease-out;
+  -moz-transition: all .4s ease-out;
+  -ms-transition: all .4s ease-out;
+  -o-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+}
+#nav-container.shrink{
+    .navbar-header{
+      .navbar-brand{
+        padding:.7em .95em;
+        img{
+          width: 68%;
+        }
+      }
+    }
+    .navbar-nav{
+      margin-top: 0;
+      & > li > a {
+        line-height: .65em;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        font-size: 85%;
+        padding-right: 25px;
+        padding-left: 25px;
+      }
+      & > li > a.btn{
+        margin-top: 9px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+      }
+    }
+}

@@ -1,0 +1,30 @@
+article{
+  header{
+    .tagline{
+      font-family: 'Open Sans', sans-serif;
+    }
+    .article-bar{
+      font-family: 'Open Sans', sans-serif;
+    }
+  }
+  blockquote{
+
+  }
+  .content{
+    float:left;
+    width: 66%;
+    font-family: 'Open Sans', sans-serif;
+    p{
+      line-height: 1.8em;
+    }
+  }
+  aside{
+    border-left: 6px solid #c2ccd1;
+    width: 33%;
+    padding-left: 1.4em;
+    float: left;
+  }
+  footer{
+    clear:both;
+  }
+}
