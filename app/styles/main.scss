@@ -259,6 +259,10 @@ p{
   }
   .opening{
     padding-top: 60px;
+    h2{
+      font-family: 'Open Sans', sans-serif;
+      color: $brand-primary;
+    }
   }
   .service h1{
     font-size: 2.8em;
