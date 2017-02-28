@@ -14,6 +14,10 @@ app.config(['$routeProvider',function ($routeProvider) {
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
     })
+    .when('/blog/', {
+      templateUrl: 'views/blog.html',
+      controller: 'BlogCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });

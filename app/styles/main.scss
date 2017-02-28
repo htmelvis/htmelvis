@@ -1,8 +1,13 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
+
+
 body, h1,h2,h3,h4,h5,h6{
   font-family: 'Montserrat', sans-serif;
+}
+a{
+  color: #5bc0de;
 }
 body{
   font-size: 160%;
@@ -30,6 +35,8 @@ body {
 }
 .bio h1, .service h1{
   font-size: 3.75em;
+  line-height: 1em;
+    margin-bottom: .55em;
 }
 .resume{
   margin : 20px 0 0 20px;
@@ -40,6 +47,9 @@ body {
   margin-left: 10px;
   a.btn{
     padding: 5px 10px;
+    &:hover{
+      transition: all 600ms ease-in;
+    }
   }
 }
 .main{
@@ -62,7 +72,16 @@ body {
     display: block;
     text-transform: uppercase;
     background: #5bc0de;
+    border-width: .15em;
     border-color: #46b8da;
+    transition: background 500ms ease-in;
+    &:hover{
+      //background: #4876bf;
+      background: #1b1b1b;
+    }
+    @media (min-width: 1300px){
+      margin: 5em auto;
+    }
   }
 }
 /* Custom page header */
@@ -87,6 +106,7 @@ blockquote{
   line-height: 1em;
   font-weight: bold;
 }
+
 /* Custom page footer */
 .footer .container{
     padding-top: 19px;
@@ -103,6 +123,13 @@ blockquote{
   height: 800px;
   padding: 95px 80px 80px 80px;
   margin: 200px 0;
+  ul{
+    margin: 2em 0;
+    li{
+      font-size: 1.4em;
+      line-height: 1.8em;
+    }
+  }
 }
 .container-narrow > hr {
     margin: 30px 0;
@@ -162,10 +189,15 @@ p{
     padding-bottom: 8px;
     margin-bottom: 30px;
   }
+
   form{
     .btn-info{
-      padding: 20px 0;
+      padding: 14px 0 20;
       margin-top: 30px;
+    }
+    input{
+      height: 52px;
+
     }
   }
 }
@@ -194,14 +226,20 @@ p{
         border-bottom: 0;
     }
     //responsive nav area
-    
+    .navbar{
+      padding: 1em;
+      padding-left: 2em;
+    }
 }
 @media screen and (max-width: 768px) {
+    .nav-collapse.in#navbar{
+      clear:both;
+    }
     img.full-bg{
       width: 140%;
     }
     .nav-collapse.in ul{
-      width: 104%;
+      width: 100%;
       float: none !important;
     }
   .navbar-inverse .navbar-nav > li > a {
@@ -228,8 +266,19 @@ p{
   blockquote{
     display: none;
   }
-  #sub,#sub2{
-    display:none !important;
+  #sub{
+    font-size: 2em;
+  }
+  #sub2{
+    font-size: 3em;
+  }
+  .navbar.navbar-fixed-top .container{
+    padding-right: 2em;
+
+  }
+  .nav.navbar-nav{
+    display: block;
+    margin-top: 4em;
   }
 }
 
@@ -258,7 +307,13 @@ p{
     left: 0px;
 }
 .accent{
-  color: $brand-primary;
+  color: #5bc0de;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+aside h2{
+  font-size: 1.3em;
+  text-transform: uppercase;
 }
 
 .port-row{
@@ -269,4 +324,161 @@ p{
       border: 2px solid #444;
     }
   }
+}
+//changing text introduction
+.intro{
+  h1,h2{
+    transition: all 1500ms ease-in;
+  }
+  .interchange{
+    display: inline-block;
+    span{
+      font-style: normal;
+      &.is-visible{
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.intro h1.rotate-1 .interchange span,
+.intro h2.rotate-1 .interchange span{
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+}
+
+.intro h1.rotate-1 .interchange span.is-visible,
+.intro h2.rotate-1 .interchange span.is-visible {
+  position: relative;
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.intro h1.rotate-1 .interchange span.is-visible,
+.intro h2.rotate-1 .interchange span.is-visible{
+  position: relative;
+  opacity: 1;
+  transform: rotateX(0deg);
+  animation: cd-rotate-1-in 1.2s;
+}
+
+.intro h1.rotate-1 span.is-hidden,
+.intro h2.rotate-1 span.is-hidden{
+  transform: rotateX(180deg);
+  animation: cd-rotate-1-out 1.2s;
+}
+
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
+/* --------------------------------
+
+xloading-bar
+
+-------------------------------- */
+.intro h1.loading-bar span {
+  padding: .2em 0;
+}
+.intro h1.loading-bar .interchange {
+  overflow: hidden;
+  vertical-align: top;
+
+}
+.intro h1.loading-bar .interchange::after {
+  /* loading bar */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #0096a7;
+  z-index: 2;
+  -webkit-transition: width 0.3s -0.1s;
+  -moz-transition: width 0.3s -0.1s;
+  transition: width 0.3s -0.1s;
+}
+.intro h1.loading-bar .interchange.is-loading::after {
+  width: 100%;
+  -webkit-transition: width 3s;
+  -moz-transition: width 3s;
+  transition: width 3s;
+}
+.intro h1.loading-bar .interchange span {
+  top: .2em;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.intro h1.loading-bar .interchange span.is-visible {
+  opacity: 1;
+  top: 0;
+}
+.is-hidden{
+  display: none;
+}
+
+.intro .interchange span{
+  display: none;
+}
+section .container h4{
+    margin-bottom: 2em;
+}
+.bio, .about, .service{
+  margin-top: 4.125em;
+}
+.contact{
+  padding-top: 5em;
+  margin-top: 3em;
+}
+.blog-articles{
+  p{
+    line-height: 1.8em;
+  }
+  .accent{
+    font-size: 2.2em;
+    color: #15395b;
+    margin: 1.2em 0;
+  }
+  ul{
+    margin: 1.2em 0;
+    li{
+      line-height: 2em;
+    }
+  }
+
 }

@@ -4,14 +4,21 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N5SF7B6');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>htmelvis | web development and online marketing expertise from Erie, Pennsylvania</title>
-    <meta name="description" content="">
+    <title>Digital marketing and web design for growth online - htmelvis</title>
+    <meta name="description" content="Grow your business with search engine optimization, online marketing and web design expertise. Tested user focused design to generate life long business.">
     <base href="/">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
@@ -22,6 +29,10 @@
     <!-- endbuild -->
   </head>
   <body ng-app="htmelvisTemplateApp">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5SF7B6"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -33,14 +44,22 @@
             <a class="brand" du-smooth-scroll duration="2000" href="#home">
               <img src="/images/logo.png" alt="htmelvis erie, pennsylvania web design" />
             </a>
-            <div class="nav-collapse" id="navbar">
-            <ul class="nav navbar-nav pull-right">
-              <li><a href="#about" du-smooth-scroll duration="3000">about</a></li>
-              <li><a href="#services" du-smooth-scroll duration="3000">services/work</a></li>
-              <li><a href="#contact" du-smooth-scroll duration="3000">contact</a></li>
+            <div class="collapse nav-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#about" du-smooth-scroll duration="700">about</a></li>
+              <li><a href="#services" du-smooth-scroll duration="800">services/work</a></li>
+              <li><a href="#contact" du-smooth-scroll duration="900">contact</a></li>
+              <li><a href="#blog">writing</a></li>
               <li class="client-login"><a href="https://htmelvis.freshbooks.com" target="_blank" class="btn btn-info navbar-btn">client login</a></li>
             </ul>
             </div>
+            <ul class="nav navbar-nav pull-right hidden-xs">
+              <li><a href="#about" du-smooth-scroll duration="700">about</a></li>
+              <li><a href="#services" du-smooth-scroll duration="800">services/work</a></li>
+              <li><a href="#contact" du-smooth-scroll duration="900">contact</a></li>
+              <li><a href="#blog">writing</a></li>
+              <li class="client-login"><a href="https://htmelvis.freshbooks.com" target="_blank" class="btn btn-info navbar-btn">client login</a></li>
+            </ul>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
@@ -48,22 +67,12 @@
               <span class="icon-bar"></span>
             </button>
         </div>
-        
+
       </nav>
 
     </header>
     <div ng-view=""></div>
-    
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -91,5 +100,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
+
+
 </body>
 </html>

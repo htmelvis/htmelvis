@@ -1,10 +1,11 @@
 'use strict';
-app.controller('MainCtrl',['$scope','parallaxHelper', '$http', '$location' ,function ($scope, parallaxHelper, $http, $location) {
-  $scope.background = parallaxHelper.createAnimator(0.6, -10, -860);
+app.controller('MainCtrl',['$scope','$http', '$location' ,function ($scope, $http, $location) {
 
   var newdate = new Date;
   $scope.date = newdate.getFullYear();
   $scope.formData = {};
+  $scope.navigationState = {};
+
   $scope.submitForm = function(){
   	if($scope.contactForm.$valid){
   		$http({
@@ -23,41 +24,48 @@ app.controller('MainCtrl',['$scope','parallaxHelper', '$http', '$location' ,func
   		});
   	}
   };
+
   $scope.gotolink = function(link){
   	 $location = link;
   	 return true;
   };
 
-	var opts = {
-		containerId: 'sub',
-		namespace: 'sub',
-		interval: 5500,
-		speed: 100,
-		verbose: false,
-		random: false,
-		best: true
-	};
-	var opts2 ={
-		containerId: 'sub2',
-		namespace: 'sub2',
-		interval: 6000,
-		speed: 100,
-		verbose: false,
-		random: false,
-		best: true
-	}
-	var sub = new Sub([
-		"I'm Ed, An Entrepreneur.",
-		"I'm Ed, A Father. ",
-		"I'm Ed, A Web Worker. ",
-		"I'm Ed, A Husband. "
-	], opts).run();
+  $scope.updateNavigationState = function($currentState){
+     var state = $currentState || false;
+     // currently scrolling?
+     // if stopped and not at the top
+     // scrolling down so hide the nav
+     // background color state (black/white)
+     //
+  };
 
-	var sub2 = new Sub([
-		"I love to build websites.",
-		"I love to build web apps.",
-		"I love to fix websites.",
-		"I love to design websites."
-	], opts2).run();
+  // provide a method that checks validity and sends back a differnt var to the frton end.
+  //Use tag manager for types of link clicks to track what is going on .
+
+  $scope.validateInput = function(input){
+    console.log(input)
+  }
+}]);
+app.controller('BlogCtrl',['$scope','$location' ,function ($scope, $location) {
+
+  var newdate = new Date;
+  $scope.date = newdate.getFullYear();
+  $scope.formData = {};
+  $scope.navigationState = {};
+
+
+  $scope.gotolink = function(link){
+    $location = link;
+    return true;
+  };
+
+  $scope.updateNavigationState = function($currentState){
+    var state = $currentState || false;
+    // currently scrolling?
+    // if stopped and not at the top
+    // scrolling down so hide the nav
+    // background color state (black/white)
+    //
+  };
 
 }]);

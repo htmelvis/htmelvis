@@ -6,16 +6,14 @@ $data   = array();
 
 $name = 	$_POST['name'];
 $email = 	$_POST['email'];
-$subject = 	$_POST['subject'];
-$url = 		$_POST['url'];
 $message = 	$_POST['message'];
 $honeypot = $_POST['honeypot'];
 
 function check_email_address($email) {
-  // First, we check that there's one @ symbol, 
+  // First, we check that there's one @ symbol,
   // and that the lengths are right.
   if (!ereg("^[^@]{1,64}@[^@]{1,255}$", $email)) {
-    // Email invalid because wrong number of characters 
+    // Email invalid because wrong number of characters
     // in one section or wrong number of @ symbols.
     return false;
   }
@@ -29,7 +27,7 @@ $local_array[$i])) {
       return false;
     }
   }
-  // Check if domain is IP. If not, 
+  // Check if domain is IP. If not,
   // it should be valid domain name
   if (!ereg("^\[?[0-9\.]+\]?$", $email_array[1])) {
     $domain_array = explode(".", $email_array[1]);
@@ -54,9 +52,7 @@ if(empty($name)){
 if(empty($email) && check_email_address($email)){
 	$errors['email'] = 'Email Address is Invalid!';
 }
-if(empty($url)){
-	$errors['url'] = 'URL was invalid!';
-}
+
 if(empty($message)){
 	$errors['message'] = 'Enter a message to be sent';
 }
@@ -70,12 +66,12 @@ if(!empty($errors)){
 } else {
 	//if there are no errors, tell us
 	$data['success'] = true;
-	$data['message'] = 'Thank you for submitting the form! I will get back in touch with you as soon as I can!';
+	$data['message'] = 'Thank you for contacting me! I will get back in touch with you as soon as I can!';
 	$message="\n Customer Inquiry \n" . "From: $name \n" ;
-	$message.="Customer Email: $email" . " \n Their Website: $url";
-	$message.="Subject: \n $subject" . "\n The Message: \n". $message;
+	$message.="Customer Email: $email" . " \n ";
+	$message.="\n The Message: \n". $message;
 
-
+  $subject = "Online Inquiry from the website";
 	mail('info@htmelvis.com', $subject, $message, 'From:' . $email);
 }
 
